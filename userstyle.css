@@ -96,6 +96,7 @@ code {
 
 #rendered-md {
     padding: 2%;
+    width: 96% !important;
 }
 
 /* Mermaid */
