@@ -1,10 +1,7 @@
 # JOPLIN THEME - DARK GRUVBOX
-
-## NOTICE: ACCEPTING PULL REQUEST TO UPDATE THEME - If you made it better please update this repo! :)
-
+This fork contains personal customisations of the original theme including tweaks for mermaid.
 
 ### About
-
 Inspired by "Mayukai Mirage Gruvbox Darktooth Theme" on VSCode.
 
 This theme used the [gruvbox](https://github.com/morhetz/gruvbox) pallete of colors mainly. I heavily modified the colors from https://github.com/amandamcg/joplin-theme and added a view touches like better quote blocks. It also uses the base dark theme of Joplin, so make sure to select that too.
@@ -12,7 +9,6 @@ This theme used the [gruvbox](https://github.com/morhetz/gruvbox) pallete of col
 ![](https://github.com/robotcorner/joplin-theme-dark-gruvbox/blob/master/screenshots/sample-img1.png)
 
 ### Support
-
 In order to change settings you need to open your joplin advanced theme settings.
 
 - Userchrome.css (Modifies entire app view, except markdown)
