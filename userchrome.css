@@ -1,3 +1,4 @@
+/* For styling the entire Joplin app (except the rendered Markdown, which is defined in `userstyle.css`) */
 /* html-ized markdown for entire app */
 /* designed originally by uxamanda (https://discourse.joplinapp.org/u/uxamanda). latest version https://github.com/amandamcg/joplin-theme */
 /* Redesigned by Stephen (robotcorner) https://https://github.com/robotcorner/joplin-theme-dark-gruvbox */
@@ -42,12 +43,12 @@
     --font-weight-light: 200;
     --font-weight-base: 400;
     --font-weight-bold: 500;
-    --font-sans: "Work Sans";
-    --font-mono: "Cascadia Code";
+    --font-sans: "Helvetica";
+    --font-mono: "Ubuntu Mono";
     --primary: var(--purple);
     --secondary: var(--orange-dark);
     --font-line-height: 1.4em;
-    --font-size: var(--base-size-16);
+    --font-size: var(--base-size-14);
     --icon-size: var(--font-size);
 }
 
@@ -55,7 +56,6 @@
     font-family: var(--font-sans) !important;
     font-weight: var(--font-weight-base) !important;
     font-size: var(--font-size) !important;
-    line-height: var(--font-line-height) !important;
 }
 
 .fa, .far, .fas {
@@ -154,7 +154,7 @@ body {
 
 .ace_string {
     color: var(--primary) !important;
-    
+
 }
 
 .ace_cursor {
@@ -170,25 +170,10 @@ body {
 /* gui */
 .side-bar {
     background-color: var(--black) !important;
-    opacity: 0.8;
 }
-
-.side-bar .folders {}
 
 .side-bar .folders .list-item, .side-bar div, .side-bar span {
     color: var(--dark-white) !important;
-    font-weight: var(--font-weight-base) !important;
-    font-size: var(--font-size) !important;
-    margin-bottom: var(--base-size-1);
-}
-
-.side-bar div div {
-    font-size: var(--font-size) !important;
-}
-
-/* making icons the same width so text aligns */
-.side-bar .fas:first-of-type {
-    width: var(--base-size-18)
 }
 
 .list-item div {
@@ -197,7 +182,7 @@ body {
     opacity: 0.3 !important;
 }
 
-.synchronize-button {}
+/*.synchronize-button {}*/
 
 .note-list {
     background-color: var(--black);
@@ -206,7 +191,7 @@ body {
 }
 
 .note-list input[type="checkbox"i] {
-    opacity: 0.5 !important;
+    opacity: 0.8 !important;
 }
 
 .note-list div {
@@ -225,13 +210,6 @@ body {
 
 .tag-list {
     order: 4;
-}
-
-/* icons */
-.fa, .far, .fas {
-    color: var(--light-grey) !important;
-    padding-right: var(--base-size-4);
-    padding-left: var(--base-size-4)
 }
 
 #react-root>div {
@@ -255,11 +233,13 @@ body {
     height: var(--base-size-40)
 }
 
+/*
 .editor-toolbar .button:not(.disabled):hover, .header .button:not(.disabled):hover{
     color: var(--white) !important;
     background-color: var(--yellow-darkest) !important;
     border: 1px solid var(--yellow-darkest) !important;
 }
+*/
 
 .editor-toolbar .button, .header .button {
     border: 0 !important;
@@ -281,131 +261,8 @@ body {
     color: var(--darker-white);
 }
 
-input {
-    border-radius: var(--base-size-4) !important;
-    border: 0px !important;
-    background-color: var(--dark-grey) !important;
-    border: var(--base-size-1) solid var(--grey) !important;
-    opacity: 0.7;
-    /*outline: none;*/
-}
-
-input:focus {
-    outline: none;
-    border: var(--base-size-1) solid var(--orange-dark) !important;
-}
-
-.header .title {
-    display: none !important;
-}
-
-.folders i.fa.fa-minus-square, .folders i.fa.fa-plus-square {
-    padding-right: 3px !important;
-}
-
-.folders .list-item-container {
-    margin: 0 !important;
-}
-
 .note-list .list-item-container:hover, .folders .list-item-container:hover {
     /* background-color: var(--darker-white) !important; */
-    background-color: var(--yellow-darkest) !important;
-}
-
-.folders a.list-item {
-    padding-left: var(--base-size-8);
-    margin: 0 !important;
-}
-
-.side-bar>div:last-child div {
-    font-family: var(--font-mono) !important;
-    font-size: calc(var(--font-size)/1.3) !important;
-    padding: 2px;
-}
-
-.side-bar>div:last-child {
-    padding: var(--base-size-4) !important;
-    font-family: var(--font-mono) !important;
-    border-top: var(--base-size-1) solid var(--black);
-}
-
-.synchronize-button {
-    border: none !important;
-    background: var(--dark-grey);
-    border-radius: var(--base-size-4) !important;
-    padding: var(--base-size-14) !important;
-    color: var(--light-grey) !important;
-    text-transform: uppercase;
-    font-family: var(--font-mono) !important;
-    font-weight: var(--font-weight-bold) !important;
-    letter-spacing: 1px;
-}
-
-/* TESTING BELOW */
-/* code mirror */
-
-.cm {
-    font-family: var(--font-sans);
-    font-size: var(--font-size);
-}
-
-/* background and base color */
-.cm-s-material-darker.CodeMirror {
     background-color: var(--black) !important;
-    color: var(--light-grey) !important
-}
-
-/* lists */
-.cm-s-material-darker .cm-variable-2 {
-    color: var(--light-grey) !important
-}
-
-/* internal links */
-.cm-s-material-darker .cm-string {
-    color: var(--primary) !important
-}
-
-/* headers */
-.cm-header-1, .cm-header-2, .cm-header-3, .cm-header-4 {
-    color: var(--dark-white) !important
-}
-
-.cm-variable-2, .cm-meta {
-    color: var(--red-dark) !important;
-   /* changes the font colour for all lists (.cm-meta controls the checkbox square brackets [ ] ) */
-}
-.cm-comment {
-    color: var(--green-dark) !important;
-   /* changes the font colour for code text*/
-}
-.cm-quote {
-    color: var(--purple-dark) !important;
-   /* changes the font colour for quoted text*/
-}
-.cm-image-marker {
-    color: var(--red);
-   /* changes the font colour for the "!" before displayed image links */
-    font-weight: 900;
-   /* changes the font weight for the "!" before displayed image links */
-}
-.cm-link, .cm-url {
-/* .cm-link is everything in the square brackets | .cm-url is the url itself in the round brackets */
-    color: var(--green) !important;
-   /* changes the font colour for links */
-    text-decoration: none !important;
-   /* removes underlining for links */
-}
-.cm-tag, .cm-attribute {
-/* HTML - .cm-tag is the HTML tag itself such as "<img>" | .cm-attribute is any HTML tag attributes such as "width" or "src" */
-/* the below are NOT applied if the html text is marked as "code" unless it is in a fenced html code block (```HTML) */
-    color: var(--dark-purple) !important;
-   /* changes the font colour for HTML tags */
-    font-weight: 500;
-   /* changes the font weight for HTML tags */
-}
-.cm-hr {
-    color: var(--orange-dark) !important;
-   /* changes the font colour for horizontal rule markdown "***" */
-    font-weight: 900;
-   /* changes the font weight for horizontal rule markdown "***" */
+    color: var(--darker-white) !important;
 }
