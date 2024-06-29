@@ -146,6 +146,11 @@ code {
     fill: none;
 }
 
+#flowchart-pointEnd {
+    fill: var(--orange) !important;
+    stroke: none !important;
+}
+
 .edgeLabel {
     background-color: var(--dark-grey) !important;
     text-align: center;
@@ -155,6 +160,11 @@ code {
       background-color: var(--dark-grey)
       fill: var(--dark-grey);
     }
+}
+
+/* flowchart text */
+.label span.nodeLabel {
+    color: white !important;
 }
 
 body {
@@ -726,7 +736,7 @@ text.actor > tspan {
 #arrowhead path {
     stroke: var(--orange) !important;
     fill: var(--orange) !important;
-}  
+}
 
 .sequenceNumber {
     fill: var(--white) !important;
